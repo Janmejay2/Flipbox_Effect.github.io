@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Flip box Designing</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }
+
+        h2 {
+            font-size: medium;
+            color: white;
+        }
+
+        /* Vertical */
+        .flip-box-vertical {
+            background-color: transparent;
+            width: 250px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-box-vertical-inner {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box-vertical:hover .flip-box-vertical-inner {
+            transform: rotateX(180deg);
+        }
+
+        .flip-box-vertical-front,
+        .flip-box-vertical-back {
+            border-radius: 7px;
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-vertical-front {
+            background: linear-gradient(#0088FF, #00FF88);
+        }
+
+        .flip-box-vertical-back {
+            background: linear-gradient(#f3d61e, #19171a);
+            color: white;
+            transform: rotateX(180deg);
+        }
+
+        .flip-box-x45 {
+            background-color: transparent;
+            width: 250px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-box-x45-inner {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box-x45:hover .flip-box-x45-inner {
+            transform: rotateY(45deg);
+        }
+
+        .flip-box-x45-front,
+        .flip-box-x45-back {
+            border-radius: 7px;
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-x45-front {
+            background: linear-gradient(#4c6EF5, #9055A2);
+            color: black;
+        }
+
+        .flip-box-x45-back {
+            background: linear-gradient(#5BC84B, #FDE74C);
+            color: white;
+            transform: rotateY(90deg);
+        }
+
+        .flip-box-y45 {
+            background-color: transparent;
+            width: 250px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-box-y45-inner {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box-y45:hover .flip-box-y45-inner {
+            transform: rotateY(-45deg);
+        }
+
+        .flip-box-y45-front,
+        .flip-box-y45-back {
+            border-radius: 7px;
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-y45-front {
+            background: linear-gradient(#5BC84B, #FDE74C);
+            color: black;
+        }
+
+        .flip-box-y45-back {
+            background: linear-gradient(#0088FF, #00FF88);
+            color: white;
+            transform: rotateY(-90deg);
+        }
+
+        .flip-box-Horizontal {
+            background-color: transparent;
+            width: 250px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-box-Horizontal-inner {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box-Horizontal:hover .flip-box-Horizontal-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-Horizontal-front,
+        .flip-box-Horizontal-back {
+            border-radius: 7px;
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-Horizontal-front {
+            background: linear-gradient(#6b12e7, #35c4f8);
+            color: black;
+        }
+
+        .flip-box-Horizontal-back {
+            background: linear-gradient(#1dffb7, #141112);
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row" style="margin-top: 180px;">
+        <div class="col-sm-3">
+            <div class="flip-box-vertical">
+                <div class="flip-box-vertical-inner">
+                    <div class="flip-box-vertical-front">
+                        <h2>Front side</h2>
+                    </div>
+                    <div class="flip-box-vertical-back">
+                        <h2>Back side</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="flip-box-x45">
+                <div class="flip-box-x45-inner">
+                    <div class="flip-box-x45-front">
+                        <h2>Front side</h2>
+                    </div>
+                    <div class="flip-box-x45-back">
+                        <h2>Back side</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="flip-box-y45">
+                <div class="flip-box-y45-inner">
+                    <div class="flip-box-y45-front">
+                        <h2>Front side</h2>
+                    </div>
+                    <div class="flip-box-y45-back">
+                        <h2>Back side</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="flip-box-Horizontal">
+                <div class="flip-box-Horizontal-inner">
+                    <div class="flip-box-Horizontal-front">
+                        <h2>Front side</h2>
+                    </div>
+                    <div class="flip-box-Horizontal-back">
+                        <h2>Back side</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
